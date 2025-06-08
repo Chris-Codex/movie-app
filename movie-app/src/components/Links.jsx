@@ -17,7 +17,10 @@ const linksData = [
 const Links = () => {
     return (
         <div className="link-wrapper">
-            
+            <div className="">
+                <p>Img</p>
+                <a href="">Home</a>
+            </div>
         </div>
     )
 }
