@@ -1,5 +1,6 @@
 import logo from "../assets/images/logo.png"
 import Links from "./Links"
+import Profile from "./Profile"
 
 const Navbar = () => {
     return (
@@ -11,8 +12,9 @@ const Navbar = () => {
                 <div className="links-wrapper">
                     <Links />
                 </div>
-                <div className="profile">
-                    Profile
+
+                <div className="profile-wrapper">
+                    <Profile />
                 </div>
             </div>
         </div>
