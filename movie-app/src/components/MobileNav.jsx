@@ -4,8 +4,8 @@ import watchlist from "../assets/images/watchlist.png";
 import originals from "../assets/images/originals.png";
 import movies from "../assets/images/movies.png";
 import series from "../assets/images/series.png";
-import { useState } from "react";
-import { Link } from "react-router-dom"
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const linksData = [
     { title: "Home", image: home, link: "/home" },
@@ -17,15 +17,15 @@ const linksData = [
 ];
 
 
-const Links = () => {
-    const [links, setLinks] = useState(linksData)
-    
+const MobileNav = () => {
+    const [links, setLinks] = useState(linksData);
+
     return (
-        <div className="navLinks-wrappeer">
+        <div className="mobileNav-wrapper">
             {links.map((link) => {
                 return (
-                    <div className="individual-link-wrapper">
-                        <img src={link.image} alt="link-image" />
+                    <div className="mobileNav-container">
+                        <img src={link.image} alt="link-img" />
                         <Link to={link.link} className="links">{link.title}</Link>
                     </div>
                 )
@@ -34,4 +34,4 @@ const Links = () => {
     )
 }
 
-export default Links
+export default MobileNav

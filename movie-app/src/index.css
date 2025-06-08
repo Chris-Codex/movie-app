@@ -3,82 +3,118 @@ body {
   height: 100vh;
   overflow-x: hidden;
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+  padding: 20px;
 }
 
-.nav-wrapper {
+header {
   display: flex;
-  gap: 100px;
-  width: 100%;
-  max-width: none !important;
   align-items: center;
   color: #fff;
-  padding-top: 30px;
-  padding-left: 50px;
+  gap: 80px;
 }
 
-.logo-container img {
+
+.logo-wrappeer img {
   width: 100%;
-  max-width: 100px;
+  max-width: 120px;
 }
 
-.links-container {
+.navs-wrapper {
   display: flex;
-  width: 100%;
   align-items: center;
-  gap: 20px;
+  width: 100%;
+  gap: 30px;
 }
 
-.links-wrapper {
-  width: 70%;
+nav {
+  width: 90%;
+}
+
+.settings-wrapper {
+  width: 30%;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+.toggle-btn img {
+  width: 30px;
 }
 
 .navLinks-wrappeer {
   display: flex;
-  gap: 55px;
+  gap: 60px;
 }
 
 .individual-link-wrapper {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .individual-link-wrapper img {
   width: 30px;
 }
 
-
-.individual-link-wrapper .links {
+.links {
   color: #fff;
   text-decoration: none;
 }
 
-.individual-link-wrapper .links:hover {
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 10px;
+.settings-wrapper .inner-settings-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.profile-wrapper {
-  width: 30%;
-}
-
-
-.profile-container {
-  width: 100%;
-}
-
-.logo-user-wrappeer {
+.profile-logo {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 25px;
-  margin-right: 99px;
+  gap: 30px;
 }
 
-.logo-user-wrappeer img {
-  width: 100%;
-  max-width: 70px;
+.profile-logo img {
+  width: 80px;
   border-radius: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .settings-wrapper {
+    width: 100%;
+  }
+
+  .profile-logo img {
+    width: 40px;
+  }
+
+  .profile-logo p {
+    display: none;
+  }
+
+  .mobileNav-wrapper {
+    margin-top: 20px;
+    height: 100%;
+    min-height: 330px;
+    background-color: #000411;
+  }
+
+  .mobileNav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .mobileNav-container img {
+    width: 23px;
+  }
 }
