@@ -14,6 +14,8 @@ const linksData = [
     {title: "SERIES", image: {series}, link: "https: lik-6.com"}
 ];
 
+console.log(linksData)
+
 const Links = () => {
     return (
         <div className="link-wrapper">
