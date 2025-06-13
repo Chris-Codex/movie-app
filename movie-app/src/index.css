@@ -10,7 +10,7 @@ header {
   display: flex;
   align-items: center;
   color: #fff;
-  gap: 80px;
+  gap: 70px;
 }
 
 
@@ -24,6 +24,7 @@ header {
   align-items: center;
   width: 100%;
   gap: 30px;
+  font-weight: 600;
 }
 
 nav {
@@ -74,9 +75,52 @@ nav {
 }
 
 .profile-logo img {
-  width: 80px;
+  width: 50px;
   border-radius: 100px;
 }
+
+/*Profile Components*/
+.profile-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  max-width: 300px;
+  height: 100%;
+  max-height: 300px;
+  color: white;
+  background-color: #010925;
+  border-top: none;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;;
+  right: 0;
+  padding: 20px;
+}
+
+.setting-profile-wrapper {
+  position: absolute;
+  display: flex;
+  right: 0;
+  padding-right: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.setting-profile-wrapper img {
+  width: 40px;
+  border-radius: 100px;
+}
+
+.divider {
+  margin-top: 60px;
+  border: 1px solid #5555552f;
+}
+
+.settings-actions-wrapper p {
+  padding-bottom: 15px;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -104,7 +148,7 @@ nav {
     margin-top: 20px;
     height: 100%;
     min-height: 330px;
-    background-color: #000411;
+    background-color: #010925;
   }
 
   .mobileNav-container {
@@ -117,4 +161,22 @@ nav {
   .mobileNav-container img {
     width: 23px;
   }
+
+  .profile-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    max-width: 230px;
+    height: 100%;
+    max-height: 300px;
+    color: white;
+    background-color: #010925;
+    border-top: none;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;;
+    right: 0;
+    padding: 20px;
+  }
+
 }

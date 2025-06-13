@@ -1,7 +1,7 @@
 import logo from "../assets/images/logo.png"
 import mickey from "../assets/images/mickey_logo.jpeg"
+import close from "../assets/images/close.png"
 import Links from "./Links"
-import Profile from "./Profile"
 import hamburger from "../assets/images/hamburger.png"
 import { useContext } from "react"
 import AppContext from "../context/AppContext"
@@ -9,7 +9,8 @@ import AppContext from "../context/AppContext"
 
 
 const Navbar = () => {
-    const { navToggle, handleNavToggle } = useContext(AppContext);
+    const { navToggle, handleNavToggle, 
+        isMouseEnter, setIsMouseEnter } = useContext(AppContext);
 
     return (
         <header>
@@ -22,7 +23,10 @@ const Navbar = () => {
                     <Links />
                 </nav>
 
-                <div className="settings-wrapper">
+                <div className="settings-wrapper"
+                    onMouseEnter={() => setIsMouseEnter(true)}
+                    onMouseLeave={() => setIsMouseEnter(false)}
+                >
                     <div className="inner-settings-container">
                         <div className="profile-logo">
                             <p>Mickey</p>
@@ -32,7 +36,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="toggle-btn" onClick={() => handleNavToggle()}>
-                    <img src={hamburger} alt="logo" />
+                    {navToggle ? 
+                        <img src={close} alt="logo" /> : <img src={hamburger} alt="logo" /> 
+                    }  
                 </div>
             </div>
         </header>

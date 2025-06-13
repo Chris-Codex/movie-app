@@ -1,20 +1,21 @@
-import mickey_logo from "../assets/images/mickey_logo.jpeg"
+import mickey from "../assets/images/mickey_logo.jpeg"
 
 const Profile = () => {
 
     return (
         <div className="profile-container">
-            <div className="logo-user-wrappeer">
-                <div className="username">Chhristia</div>
-                <img src={mickey_logo} alt="user-logo" />
-            </div>
-
-            <div className="settinngs-wrapper">
-                <div className="logo-user-wrappeer-second">
-                    <div className="username">Chhristia</div>
-                    <img src={mickey_logo} alt="user-logo" />
-                </div>
-            </div>
+           <div className="setting-profile-wrapper">
+                <img src={mickey} alt="profile-icon" />
+                <p>Christian</p>
+           </div>
+           <div className="divider"></div>
+           <div className="settings-actions-wrapper">
+                <p>Edit Profile</p>
+                <p>App Settings</p>
+                <p>Account</p>
+                <p>Help</p>
+                <p>Logout</p>
+           </div>
         </div>
     )
 }
