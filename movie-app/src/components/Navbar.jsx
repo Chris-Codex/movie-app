@@ -10,7 +10,7 @@ import AppContext from "../context/AppContext"
 
 const Navbar = () => {
     const { navToggle, handleNavToggle, 
-        isMouseEnter, setIsMouseEnter } = useContext(AppContext);
+         setIsMouseEnter } = useContext(AppContext);
 
     return (
         <header>
@@ -25,7 +25,6 @@ const Navbar = () => {
 
                 <div className="settings-wrapper"
                     onMouseEnter={() => setIsMouseEnter(true)}
-                    onMouseLeave={() => setIsMouseEnter(false)}
                 >
                     <div className="inner-settings-container">
                         <div className="profile-logo">
