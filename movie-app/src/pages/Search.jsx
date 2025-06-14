@@ -4,14 +4,14 @@ import Navbar from "../components/Navigation";
 import AppContext from "../context/AppContext";
 import Profile from "../components/Profile";
 
-const Home = () => {
+const Search = () => {
     const { navToggle, isMouseEnter, setIsMouseEnter } = useContext(AppContext);
 
     return (
-        <div className="home-wrapper">
+        <div>
             <Navbar />
         </div>
     )
 }
 
-export default Home;
+export default Search;

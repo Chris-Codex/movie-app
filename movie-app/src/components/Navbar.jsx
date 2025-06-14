@@ -1,47 +1,19 @@
-import logo from "../assets/images/logo.png"
-import mickey from "../assets/images/mickey_logo.jpeg"
-import close from "../assets/images/close.png"
-import Links from "./Links"
-import hamburger from "../assets/images/hamburger.png"
-import { useContext } from "react"
-import AppContext from "../context/AppContext"
+import { useContext } from "react";
+import MobileNav from "../components/MobileNav";
+import Navbar from "./Navigation";
+import AppContext from "../context/AppContext";
+import Profile from "../components/Profile";
 
-
-
-const Navbar = () => {
-    const { navToggle, handleNavToggle, 
-         setIsMouseEnter } = useContext(AppContext);
+const Home = () => {
+    const { navToggle, isMouseEnter, setIsMouseEnter } = useContext(AppContext);
 
     return (
-        <header>
-            <div className="logo-wrappeer">
-                <img src={logo} alt="logo" />
-            </div>
-
-            <div className="navs-wrapper">
-                <nav>
-                    <Links />
-                </nav>
-
-                <div className="settings-wrapper"
-                    onMouseEnter={() => setIsMouseEnter(true)}
-                >
-                    <div className="inner-settings-container">
-                        <div className="profile-logo">
-                            <p>Mickey</p>
-                            <img src={mickey} alt="profile-logo" />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="toggle-btn" onClick={() => handleNavToggle()}>
-                    {navToggle ? 
-                        <img src={close} alt="logo" /> : <img src={hamburger} alt="logo" /> 
-                    }  
-                </div>
-            </div>
-        </header>
+        <div className="home-wrapper">
+            <Navbar />
+            {navToggle ? <MobileNav /> : ""}
+            {isMouseEnter ? <Profile /> : ""}
+        </div>
     )
 }
 
-export default Navbar
+export default Home;
