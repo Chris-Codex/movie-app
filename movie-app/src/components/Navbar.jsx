@@ -1,19 +1,19 @@
 import { useContext } from "react";
-import MobileNav from "../components/MobileNav";
-import Navbar from "./Navigation";
+import MobileNav from "./MobileNav";
 import AppContext from "../context/AppContext";
-import Profile from "../components/Profile";
+import Profile from "./Profile";
+import Navigation from "./Navigation";
 
-const Home = () => {
+const Navbar = () => {
     const { navToggle, isMouseEnter, setIsMouseEnter } = useContext(AppContext);
 
     return (
         <div className="home-wrapper">
-            <Navbar />
+            <Navigation />
             {navToggle ? <MobileNav /> : ""}
             {isMouseEnter ? <Profile /> : ""}
         </div>
     )
 }
 
-export default Home;
+export default Navbar;

@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import MobileNav from "../components/MobileNav";
-import Navbar from "../components/Navigation";
 import AppContext from "../context/AppContext";
-import Profile from "../components/Profile";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
     const { navToggle, isMouseEnter, setIsMouseEnter } = useContext(AppContext);
